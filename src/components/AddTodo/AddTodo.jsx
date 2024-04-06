@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { v as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 export default function AddTodo({ onAdd }) {
   const [text, setText] = useState("");
