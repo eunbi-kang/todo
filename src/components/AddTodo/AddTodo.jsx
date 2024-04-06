@@ -1,19 +1,17 @@
-import React, {useState} from "react";
-import {v4 as uuidv4} from 'uuid';
+import React, { useState } from "react";
+import { v as uuidv4 } from "uuid";
 
 export default function AddTodo({ onAdd }) {
-  const[text, setText] = useState("");
+  const [text, setText] = useState("");
   const handleChange = (e) => {
     setText(e.target.value);
-  }
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e); 
-    onAdd({id: uuidv4(), text, status: 'active'})
-    setText('');
-    // setId(id + 1);
-  }
-  //onAdd();
+    console.log(e);
+    onAdd({ id: uuidv4(), text, status: "active" });
+    setText("");
+  };
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -25,4 +23,6 @@ export default function AddTodo({ onAdd }) {
       <button>Add</button>
     </form>
   );
-}
+} 
+
+
