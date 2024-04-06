@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AddTodo from "../AddTodo/AddTodo";
 import Todo from "../Todo/Todo";
 
-export default function TodoList() {
+export default function TodoList({filter}) {
   const [todos, setTodos] = useState([
     { id: "123", text: "호야와 장보기", status: "active" },
     { id: "124", text: "먼비와 공부하기", status: "active" },
@@ -13,10 +13,12 @@ export default function TodoList() {
   const handleUpdate = (updated) => setTodos(todos.map(t => t.id === updated.id ? updated : t));
   // 아이디가 삭제하고자 하는 아이디가 아닌 것들만 모아서 setTodos 배열에 모아줌
   const handleDelete = (deleted) => setTodos(todos.filter(t=> t.id !== deleted.id));
+
+  const filtered = getFilteredItems(todos, filter);
   return (
     <section>
       <ul>
-        {todos.map((item) => (
+        {filtered.map((item) => (
           <Todo
             key={item.id}
             todo={item}
@@ -28,4 +30,11 @@ export default function TodoList() {
       <AddTodo onAdd={handleAdd} />
     </section>
   );
+}
+
+function getFilteredItems(todos, filter){
+  if(filter === 'all'){
+    return todos;
+  }
+  return todos.filter(todo => todo.status === filter);
 }
