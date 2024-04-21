@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 import "./App.css";
 import Header from "./components/Header/Header";
 import TodoList from "./components/TodoList/TodoList";
@@ -11,12 +11,12 @@ function App() {
   // console.log(filter);
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>은비의 To-do App</title>
         <meta
             name="description"
             content="React web site portfolio for world-renowned software
-  engineer Eunbi-kang"
+  engineer Eunbi-kang"    
           />
           <meta name="author" content="Eunbi" />
           <link
@@ -33,13 +33,13 @@ function App() {
             content="https://eunbi-kang.github.io/public/og.webp"
           />
           <meta property="og:site_name" content="Eunbi's TodoApp" />
-      </Helmet>
+      </Helmet> */}
 
-      <div>
+
         <Header filters={filters} filter={filter} onFilterChange={setFilter} />
         <TodoList filter={filter} />
-      </div>
-    </>
+        </>          
+  
   );
 }
 
