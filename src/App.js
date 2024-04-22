@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import "./App.css";
 import Header from "./components/Header/Header";
 import TodoList from "./components/TodoList/TodoList";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 const filters = ["all", "active", "completed"];
 
@@ -29,9 +30,10 @@ function App() {
           <meta property="og:site_name" content="Eunbi's TodoApp" />
         </Helmet>
     
-
+    <DarkModeProvider>
       <Header filters={filters} filter={filter} onFilterChange={setFilter} />
       <TodoList filter={filter} />
+      </DarkModeProvider>
     </>
   );
 }
