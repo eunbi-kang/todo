@@ -1,0 +1,11 @@
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+}
+
+.list {
+    flex: 1 1 auto; /* 리스트 높이를 꽉 차게 만들고 Add 부분을 아래로 보냄 */
+    overflow-y: auto; /* y축으로 overflow 발생시 자동으로 스크롤 생기도록 */
+}
