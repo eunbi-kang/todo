@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     padding: 1.4rem 1rem;
-    background-color: #BCA79C;
+    background-color: var(--color-beige);
 }
 
 .input {
@@ -19,8 +19,8 @@
 }
 
 .button {
-    background-color: var(--color-brown);
-    color: var(--color-beige);
+    background-color: var(--color-dark-brown);
+    color: white;
     font-weight: bold;
     font-size: 1.4rem;
     padding: 0 2rem;

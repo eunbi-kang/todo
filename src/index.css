@@ -7,11 +7,20 @@
   --color-accent: #f16e03;
   --color-ivory: #FFF7F1;
   --color-brown: #54433A;
+  --color-dark-brown: #483930;
   --color-beige: #BCA79C;
   --color-accent-green: #007C62;
   --color-green: #00B494;
 }
-
+html.dark {
+  --color-dark-brown: #007C62;
+  --color-brown: #1a1c35;
+  --color-beige: #1a1c35;
+  --color-white: #22243b;
+  --color-gray: #4e4e4e;
+  --color-text:#fdfffd; 
+  
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -25,13 +34,15 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  accent-color: var(--color-accent);
+  accent-color: var(--color-accent-green);
   background: rgb(81, 87, 111);
   background: linear-gradient(106deg,
       rgba(81, 87, 111, 1) 0%,
       rgba(60, 61, 69, 1) 100%);
-
 }
+
+
+
 * {
   box-sizing: border-box; /* padding, margin 요소들이 합해진 요소가 박스 사이즈가 되도록 */
 }

@@ -8,10 +8,12 @@ export default function Header({ filters, filter, onFilterChange }) {
   
   return (
     <header className={styles.header}>
-      <button onClick={toggleDarkMode}>
+      <span className={styles.icon}>
+      <button className={styles.button} onClick={toggleDarkMode}>
         {!darkMode && <HiMoon />}
         {darkMode && <HiSun />}
       </button>
+      </span>
       <ul className={styles.filters}>
         {/* filters의 요소를 빙글빙글 돌면서 각각의 필터를 우리가 원하는 UI요소로 변환시켜준다
          */}
