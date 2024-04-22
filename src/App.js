@@ -17,11 +17,7 @@ function App() {
           <meta name="description" content="Portfolio for world-renowned software
      engineer Eunbi" />
           <meta name="author" content="Eunbi" />
-          <link
-            rel="Shortcut icon"
-            href="/public/logo.png"
-            type="image/x-icon"
-          />
+          <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon" />
           <meta property="og:url" content="https://eunbi-kang.github.io/todo" />
           <meta property="og:title" content="주니어 족발자 은비의 투두앱" />
           <meta property="og:description" content="주니어 족발자 은비의 투두 리스트" />
