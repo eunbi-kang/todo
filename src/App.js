@@ -1,41 +1,38 @@
 import { useState } from "react";
 import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import "./App.css";
 import Header from "./components/Header/Header";
 import TodoList from "./components/TodoList/TodoList";
 
 const filters = ["all", "active", "completed"];
+
 function App() {
   const [filter, setFilter] = useState(filters[0]);
   // console.log(filter);
   return (
     <>
-      <HelmetProvider>
         <Helmet>
-          <title>은비의 To-do App</title>
-          <meta
-            name="description"
-            content="React web site portfolio for world-renowned software
-  engineer Eunbi-kang"
-          />
+        <title>주니어족발자&#39;s To-do App</title>
+          <meta name="description" content="Portfolio for world-renowned software
+     engineer Eunbi" />
           <meta name="author" content="Eunbi" />
           <link
             rel="Shortcut icon"
-            href="/public/og.webp"
+            href="/public/logo.png"
             type="image/x-icon"
           />
           <meta property="og:url" content="https://eunbi-kang.github.io/todo" />
-          <meta property="og:title" content="Eunbi's to-do list" />
-          <meta property="og:description" content="은비의 투두 리스트" />
+          <meta property="og:title" content="주니어 족발자 은비의 투두앱" />
+          <meta property="og:description" content="주니어 족발자 은비의 투두 리스트" />
           <meta property="og:type" content="website" />
           <meta
             propery="og:image"
-            content="https://eunbi-kang.github.io/public/og.webp"
+            content="https://eunbi-kang.github.io/todo/og.webp"
           />
           <meta property="og:site_name" content="Eunbi's TodoApp" />
         </Helmet>
-      </HelmetProvider>
+    
 
       <Header filters={filters} filter={filter} onFilterChange={setFilter} />
       <TodoList filter={filter} />
