@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     padding: 1.4rem 1rem;
-    background-color: var(--color-bg-dark);
+    background-color: #BCA79C;
 }
 
 .input {
@@ -14,9 +14,13 @@
     border-radius: 0.7rem 0 0 0.7rem; /* border-radius: 위 오른 아래 왼 */   
 }
 
+.input:hover {
+    background-color: var(--color-bg-dark);
+}
+
 .button {
-    background-color: var(--color-accent);
-    color: var(--color-white);
+    background-color: var(--color-brown);
+    color: var(--color-beige);
     font-weight: bold;
     font-size: 1.4rem;
     padding: 0 2rem;
@@ -24,5 +28,7 @@
 }
 
 .button:hover {
-    filter: brightness(125%); /* 마우스를 Add 버튼 위에 올렸을 때 125%만큼 밝아짐 */
+    /* filter: brightness(125%);  */
+    background-color: var(--color-accent);
+    color: var(--color-white);
 }

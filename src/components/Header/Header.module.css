@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-bg-dark);
+    background-color: var(--color-brown);
     border-bottom: 1px solid var(--color-gray);
 }
 .filters {
@@ -14,17 +14,18 @@
     text-transform: capitalize;
     /* 텍스트의 첫 글자 대문자 바꿈, 이 외에도 lowercase, uppercase가 있음 */
     background-color: transparent;
-    color: var(--color-accent);
+    color: var(--color-beige);
     opacity: 0.8;
     font-weight: bold;
 }
 .filter:hover,
 .filter.selected {
     opacity: 1;
+    color: var(--color-white);
 }
 .filter.selected::after {
     content: '';
     display: block;
     margin-top: 0.2rem;
-    border: 1px solid var(--color-text);
+    border: 1px solid var(--color-accent);
 }
