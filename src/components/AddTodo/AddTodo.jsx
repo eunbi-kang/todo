@@ -4,6 +4,8 @@ import styles from "./AddTodo.module.css";
 
 export default function AddTodo({ onAdd }) {
   const [text, setText] = useState("");
+  const [isInputClicked, setIsInputClicked] = useState(false);
+
   const handleChange = (e) => {
     setText(e.target.value);
   };
@@ -16,9 +18,15 @@ export default function AddTodo({ onAdd }) {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <input
-      className={styles.input}
+        onFocus={() => {
+          setIsInputClicked(true);
+        }}
+        onBlur={()=>{
+          setIsInputClicked(false);
+        }}
+        className={styles.input}
         type="text"
-        placeholder="Add Todo"
+        placeholder={isInputClicked === true ? "" : "Add Todo"}
         value={text}
         onChange={handleChange}
       />
