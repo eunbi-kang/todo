@@ -11,21 +11,16 @@ const MetaTag = () => {
      engineer Eunbi"
       />
       <meta name="author" content="Eunbi" />
-      <link
-        rel="shortcut icon"
-        href="public/favicon.ico"
-        type="image/x-icon" />
       <meta property="og:url" content="https://eunbi-kang.github.io/todo" />
       <meta property="og:title" content="주니어 족발자 은비의 투두앱" />
+      <meta propery="og:image" content="https://eunbi-kang.github.io/images/og.webp" />
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:height" content="300" />
       <meta
         property="og:description"
         content="주니어 족발자 은비의 투두 리스트"
       />
       <meta property="og:type" content="website" />
-      <meta
-        propery="og:image"
-        content="https://eunbi-kang.github.io/todo/og.webp"
-      />
       <meta property="og:site_name" content="Eunbi's TodoApp" />
     </Helmet>
   );
