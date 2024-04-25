@@ -19,6 +19,8 @@ html.dark {
   --color-white: #22243b;
   --color-gray: #4e4e4e;
   --color-text:#fdfffd; 
+  --color-dark: white;
+  --color-accent-green : #007C62;
   
 }
 body {
@@ -81,13 +83,13 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--color-bg-dark);
+  background-color: #f5f5f5;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-beige);
+::-webkit-scrollbar-thumb { 
+  background-color: #BCA79C;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-green);
 } 

@@ -11,6 +11,7 @@ const filters = ["all", "active", "completed"];
 function App() {
   const [filter, setFilter] = useState(filters[0]);
   // console.log(filter);
+  console.log(`NODE_ENV = ${process.env.NODE_ENV}`);
   return (
     <>
         <Helmet>
